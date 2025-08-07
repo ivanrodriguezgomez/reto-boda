@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¡Tu reto fotográfico de la boda!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.3em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .link {
+      margin-top: 1.5em;
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #f4978e;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    .link:hover {
+      background-color: #ef6c57;
+    }
+  </style>
+</head>
+<body>
+  <h1>📸 ¡Gracias por unirte al reto de la boda!</h1>
+  <p>Sube tus mejores fotos al álbum aquí:</p>
+  <p><a class="link" href="https://www.dotmoments-album.com" target="_blank">Ir al Álbum</a></p>
+
+  <p>Y este es tu cartón de fotos aleatorio para completar:</p>
+  <p><a id="bingo-link" class="link" href="#" target="_blank">Ver mi cartón</a></p>
+
+  <script>
+    const bingoLinks = [
+      "https://www.link1.com",
+      "https://www.link2.com",
+      "https://www.link3.com",
+      "https://www.link4.com"
+    ];
+    const randomIndex = Math.floor(Math.random() * bingoLinks.length);
+    const selectedLink = bingoLinks[randomIndex];
+
+    document.getElementById("bingo-link").href = selectedLink;
+  </script>
+</body>
+</html>

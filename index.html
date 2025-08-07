@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>¡Tu reto fotográfico de la boda!</title>
   <style>
     body {
@@ -20,7 +20,7 @@
       font-size: 1.2em;
     }
     .link {
-      margin-top: 1.5em;
+      margin: 1em auto;
       display: inline-block;
       padding: 12px 24px;
       background-color: #f4978e;
@@ -32,6 +32,13 @@
     .link:hover {
       background-color: #ef6c57;
     }
+    img {
+      margin-top: 2em;
+      max-width: 90%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
@@ -39,22 +46,20 @@
   <p>Sube tus mejores fotos al álbum aquí:</p>
   <p><a class="link" href="https://www.dotmoments-album.com" target="_blank">Ir al Álbum</a></p>
 
-  <p>Y este es tu cartón de fotos aleatorio para completar:</p>
-  <p><a id="bingo-link" class="link" href="#" target="_blank">Ver mi cartón</a></p>
+  <p>Este es tu cartón fotográfico, ¡haz todas las fotos posibles!</p>
+  <img id="bingo-image" src="" alt="Cartón de fotos aleatorio" />
 
   <script>
-    const bingoLinks = [
-      "https://www.canva.com/design/DAGu7pLBE4Q/nPg4l_rqQe5DpCL3YbWr1Q/edit?utm_content=DAGu7pLBE4Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-      "https://www.canva.com/design/DAGu7h21JWc/ElHHWIcLtIVIZXxAovVPag/edit?utm_content=DAGu7h21JWc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-      "https://www.canva.com/design/DAGu7lOp4T0/OQ4Yl8_PC-jlnXqK0-ly3Q/edit?utm_content=DAGu7lOp4T0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-      "https://www.canva.com/design/DAGu7qK0mpQ/Ucmub6-kYDVStdd9GcbCfw/edit?utm_content=DAGu7qK0mpQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-      "https://www.canva.com/design/DAGu7qm0SSc/bXIQ3eNy2lnBXP8-jx-PLg/edit?utm_content=DAGu7qm0SSc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+    const bingoImages = [
+      "carton1.png",
+      "carton2.png",
+      "carton3.png",
+      "carton4.png",
+      "carton5.png"
     ];
-    const randomIndex = Math.floor(Math.random() * bingoLinks.length);
-    const selectedLink = bingoLinks[randomIndex];
-
-    document.getElementById("bingo-link").href = selectedLink;
+    const randomIndex = Math.floor(Math.random() * bingoImages.length);
+    const selectedImage = bingoImages[randomIndex];
+    document.getElementById("bingo-image").src = selectedImage;
   </script>
 </body>
 </html>
-

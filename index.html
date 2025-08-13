@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 40px;
-      background-color: #fff8f0;
+      background-color: #ffd29c;
       color: #333;
     }
     h1 {
@@ -23,14 +23,14 @@
       margin: 1em auto;
       display: inline-block;
       padding: 12px 24px;
-      background-color: #f4978e;
+      background-color: #2e4918cc;
       color: white;
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
     }
     .link:hover {
-      background-color: #ef6c57;
+      background-color: #2b4516;
     }
     img {
       margin-top: 2em;
@@ -47,6 +47,12 @@
   <p><a class="link" href="https://www.dotmoments-album.com" target="_blank">Ir al Álbum</a></p>
 
   <p>Este es tu cartón fotográfico, ¡haz todas las fotos posibles!</p>
+
+  <div class="image-container">
+    <a id="download-btn" class="download-btn" href="#" download>Descargar cartón</a>
+    <img id="bingo-image" class="main" src="" alt="Cartón de fotos aleatorio" />
+  </div>
+  
   <img id="bingo-image" src="" alt="Cartón de fotos aleatorio" />
 
   <script>
@@ -60,7 +66,9 @@
     const randomIndex = Math.floor(Math.random() * bingoImages.length);
     const selectedImage = bingoImages[randomIndex];
     document.getElementById("bingo-image").src = selectedImage;
+    document.getElementById("download-btn").href = selectedImage;
   </script>
 </body>
 </html>
+
 
